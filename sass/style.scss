@@ -1,27 +1,49 @@
 @use "_reset.scss";
 
 :root {
-  --color_timmew: #fadf7b;
+  --color_timmew-yellow_P0: #fadf7b;
+  --color_timmew-yellow_P4: #f6c515;
+  --color_timmew-section-bg: #fef9e5;
 }
 
 .header {
-  background-color: var(--color_timmew);
+  background-color: var(--color_timmew-yellow_P0);
 }
 
 // メインビジュアル
-
+.mainvisual {
+  background-color: var(--color_timmew-yellow_P4);
+  height: 576px;
+}
 // problem
-
+.problem {
+  height: 1207.5px;
+}
 // おすすめ
-
+.recommended {
+  height: 684px;
+  background-color: var(--color_timmew-section-bg);
+}
 // メリット
-
+.advantages {
+  height: 2271px;
+}
 // 始め方
-
+.start {
+  height: 1238px;
+  background-color: var(--color_timmew-section-bg);
+}
 // 質問
-
+.question {
+  height: 1440px;
+}
 // commew紹介
-
+.commew-introduction {
+  height: 587px;
+  background-color: var(--color_timmew-section-bg);
+}
+//footer
 .footer {
-  background-color: var(--color_timmew);
+  background-color: var(--color_timmew-yellow_P0);
+  height: 138px;
 }

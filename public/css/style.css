@@ -108,13 +108,48 @@
 }
 
 :root {
-  --color_timmew: #fadf7b;
+  --color_timmew-yellow_P0: #fadf7b;
+  --color_timmew-yellow_P4: #f6c515;
+  --color_timmew-section-bg: #fef9e5;
 }
 
 .header {
-  background-color: var(--color_timmew);
+  background-color: var(--color_timmew-yellow_P0);
+}
+
+.mainvisual {
+  background-color: var(--color_timmew-yellow_P4);
+  height: 576px;
+}
+
+.problem {
+  height: 1207.5px;
+}
+
+.recommended {
+  height: 684px;
+  background-color: var(--color_timmew-section-bg);
+}
+
+.advantages {
+  height: 2271px;
+}
+
+.start {
+  height: 1238px;
+  background-color: var(--color_timmew-section-bg);
+}
+
+.question {
+  height: 1440px;
+}
+
+.commew-introduction {
+  height: 587px;
+  background-color: var(--color_timmew-section-bg);
 }
 
 .footer {
-  background-color: var(--color_timmew);
+  background-color: var(--color_timmew-yellow_P0);
+  height: 138px;
 }/*# sourceMappingURL=style.css.map */
