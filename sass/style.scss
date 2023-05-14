@@ -11,32 +11,47 @@
   --color_timmew-font-color: #005755;
 }
 
-.header {
+header {
   background-color: var(--color_timmew-yellow_P0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
   height: 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 64px;
-  img {
-    height: 30px;
+  width: 100%;
+  .header {
+    margin: auto;
+    width: 1280px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    padding: 0 64px;
+
+    img {
+      height: 30px;
+    }
   }
 }
 
 // メインビジュアル
 .mainvisual {
+  margin-top: 60px;
   background-color: var(--color_timmew-yellow_P4);
   height: 576px;
   font-size: 20px;
   .mainvisual_contaner {
+    width: 1280px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 125px;
+    margin: auto;
+    padding-left: 125px;
     color: var(--color_timmew-font-color);
     .MV_text {
       position: absolute;
       top: 25%;
+      z-index: 1;
       .consept-text {
         background-color: var(--color_timmew-font-color);
         color: #fff;
@@ -46,6 +61,7 @@
         width: 320px;
       }
       h2 {
+        text-shadow: 2px 2px var(--color_timmew-yellow_P4);
         font-size: 40px;
         font-weight: 600;
         margin-bottom: 36px;
@@ -53,8 +69,8 @@
       .MV_text_announce {
         margin-bottom: 36px;
         img {
-          display: inline-block;
           height: 20px;
+          display: inline-block;
         }
       }
       .Login_btn {
@@ -76,6 +92,12 @@
         border: solid 1px #0efaa8;
         box-shadow: 0 0 0;
       }
+    }
+    .MV_image-main {
+      position: absolute;
+      left: 30%;
+      min-width: 993px;
+      min-height: 576px;
     }
   }
 }
@@ -132,7 +154,10 @@
   .problem_arrow::before {
     content: "";
     position: absolute;
-    left: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     border-top: 268px solid #fef9e5;
     border-left: 400px solid transparent;
     border-right: 400px solid transparent;
@@ -174,6 +199,14 @@
   color: var(--color_timmew-font-color);
   .advantages_contaner {
     margin: 120px 64px;
+    .section-title {
+      margin-bottom: 32px;
+    }
+    .section-title_text {
+      font-size: 26px;
+      letter-spacing: 0.1em;
+      margin-bottom: 80px;
+    }
     li {
       display: flex;
       justify-content: space-around;
@@ -216,10 +249,65 @@
 .start {
   height: 1238px;
   background-color: var(--color_timmew-section-bg);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  color: var(--color_timmew-font-color);
+  .start_contaner {
+    margin: 120px auto;
+    .section-title {
+      margin-bottom: 32px;
+    }
+    .section-title_text {
+      font-size: 26px;
+      letter-spacing: 0.1em;
+      margin-bottom: 80px;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
+    .step {
+      margin-bottom: 40px;
+      .step-title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        height: 152px;
+        z-index: 1;
+      }
+      h3 {
+        margin: -20px;
+        background-color: var(--color_timmew-yellow_P4);
+        color: #fff;
+        font-size: 40px;
+        width: 800px;
+        height: 80px;
+        text-align: start;
+        line-height: 80px;
+        padding-left: 42px;
+      }
+      p {
+        text-align: start;
+        padding: 10px 0 10px 150px;
+        font-size: 24px;
+      }
+    }
+  }
 }
 // 質問
 .question {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  font-size: 24px;
+  color: var(--color_timmew-font-color);
 }
+
 // commew紹介
 .commew-introduction {
   height: 587px;

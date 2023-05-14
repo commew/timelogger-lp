@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="./public/css/style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header_logo">
-        <a href="/"><img src="./public/image/logo.png" alt="timmew" /></a>
+    <header>
+      <div class="header">
+        <div class="header_logo">
+          <a href="/"><img src="./public/image/logo.png" alt="timmew" /></a>
+        </div>
+        <div class="Login"><a href="">ログイン</a></div>
       </div>
-      <div class="Login"><a href="">ログイン</a></div>
     </header>
     <main>
       <!-- メインビジュアル -->
@@ -33,7 +35,11 @@
             </div>
           </div>
           <div class="MV_image">
-            <img src="./public/image/mv_image.png" alt="メイン画像" />
+            <img
+              class="MV_image-main"
+              src="./public/image/mv_image.png"
+              alt="メイン画像"
+            />
           </div>
         </div>
       </section>
@@ -115,7 +121,9 @@
       <section class="advantages">
         <div class="advantages_contaner">
           <h2 class="section-title">timmewを使うメリット</h2>
-          <p>timmewを使うと、こんなメリットがあります！</p>
+          <p class="section-title_text">
+            timmewを使うと、こんなメリットがあります！
+          </p>
 
           <div class="advantages_guide">
             <ul>
@@ -155,44 +163,48 @@
       </section>
       <!-- 始め方 -->
       <section class="start">
-        <div class="contaner">
-          始め方
+        <div class="start_contaner">
           <h2 class="section-title">timmewの始め方</h2>
-          <h3>3ステップで簡単に開始できます！</h3>
+          <p class="section-title_text">3ステップで簡単に開始できます！</p>
 
-          <div>
-            <img src="" alt="" />
-            <p>Googleアカウントでログイン</p>
+          <div class="step">
+            <div class="step-title">
+              <img src="./public/image/image-start/icon1.png" alt="" />
+              <h3>Googleアカウントでログイン</h3>
+            </div>
             <p>
-              timmewは、お手持ちのGoogleアカウントで簡単にログインできます。
+              timmewは、お手持ちのGoogleアカウントで<br />簡単にログインできます。
             </p>
           </div>
-          <div>
-            <img src="" alt="" />
-            <p>計測タスクを作成</p>
+          <div class="step">
+            <div class="step-title">
+              <img src="./public/image/image-start/icon2.png" alt="" />
+              <h3>計測タスクを作成</h3>
+            </div>
             <p>
-              まずは計測タスクを作成しましょう。
+              まずは計測タスクを作成しましょう。<br />
               初期登録されているタスクを使ってすぐに計測することも可能です。
             </p>
           </div>
-          <div>
-            <img src="" alt="" />
-            <p>計測開始！</p>
+          <div class="step">
+            <div class="step-title">
+              <img src="./public/image/image-start/icon3.png" alt="" />
+              <h3>計測開始！</h3>
+            </div>
             <p>ボタンクリックですぐに計測が開始されます。</p>
           </div>
         </div>
       </section>
       <!-- 質問 -->
       <section class="question">
-        <div class="contaner">
-          質問
+        <div class="question_contaner">
           <h2 class="section-title">よくある質問</h2>
           <div></div>
         </div>
       </section>
       <!-- commew紹介 -->
       <section class="commew-introduction">
-        <div class="contaner">commew紹介</div>
+        <div class="commew-introduction_contaner">commew紹介</div>
       </section>
     </main>
     <footer class="footer">footer</footer>
