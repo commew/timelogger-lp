@@ -1,32 +1,216 @@
 @use "_reset.scss";
+@font-face {
+  font-family: "kawaiitegakimoji";
+  src: url(../public/fonts/KTEGAKI.ttf);
+}
 
 :root {
   --color_timmew-yellow_P0: #fadf7b;
   --color_timmew-yellow_P4: #f6c515;
   --color_timmew-section-bg: #fef9e5;
+  --color_timmew-font-color: #005755;
 }
 
 .header {
   background-color: var(--color_timmew-yellow_P0);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 64px;
+  img {
+    height: 30px;
+  }
 }
 
 // メインビジュアル
 .mainvisual {
   background-color: var(--color_timmew-yellow_P4);
   height: 576px;
+  font-size: 20px;
+  .mainvisual_contaner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 125px;
+    color: var(--color_timmew-font-color);
+    .MV_text {
+      position: absolute;
+      top: 25%;
+      .consept-text {
+        background-color: var(--color_timmew-font-color);
+        color: #fff;
+        font-weight: 600;
+        padding: 4px 40px;
+        margin-bottom: 16px;
+        width: 320px;
+      }
+      h2 {
+        font-size: 40px;
+        font-weight: 600;
+        margin-bottom: 36px;
+      }
+      .MV_text_announce {
+        margin-bottom: 36px;
+        img {
+          display: inline-block;
+          height: 20px;
+        }
+      }
+      .Login_btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        width: 280px;
+        height: 60px;
+        background-color: #0efaa8;
+        border-radius: 30px;
+        box-shadow: 4px 4px 0 var(--color_timmew-font-color);
+        transition: 0.4s;
+      }
+      .Login_btn:hover {
+        text-decoration: none;
+        background-color: #fff;
+        color: var(--color_timmew-font-color);
+        border: solid 1px #0efaa8;
+        box-shadow: 0 0 0;
+      }
+    }
+  }
 }
+
+.section-title {
+  display: inline-block;
+  color: var(--color_timmew-font-color);
+  font-family: "kawaiitegakimoji", sans-serif;
+  border-bottom: solid 10px var(--color_timmew-yellow_P0);
+  margin: auto;
+  margin-bottom: 80px;
+  font-size: 50px;
+  font-weight: 500;
+}
+
 // problem
 .problem {
-  height: 1207.5px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  color: var(--color_timmew-font-color);
+  .problem_contaner {
+    margin: 120px auto;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    gap: 20px;
+    p {
+      margin: 16px auto;
+      width: 150px;
+    }
+  }
+  .problem_arrow {
+    width: 500px;
+    height: 268px;
+    margin: auto;
+    text-align: left;
+
+    p {
+      padding-top: 60px;
+      font-size: 32px;
+      font-weight: 600;
+    }
+    img {
+      display: inline-block;
+      height: 40px;
+    }
+  }
+
+  .problem_arrow::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    border-top: 268px solid #fef9e5;
+    border-left: 400px solid transparent;
+    border-right: 400px solid transparent;
+    z-index: -1;
+  }
 }
+
 // おすすめ
 .recommended {
-  height: 684px;
   background-color: var(--color_timmew-section-bg);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  color: var(--color_timmew-font-color);
+  .recommended_contaner {
+    margin: 120px auto;
+  }
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    gap: 20px;
+    p {
+      margin: 16px auto;
+      width: 150px;
+    }
+  }
 }
+
 // メリット
 .advantages {
-  height: 2271px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  font-size: 18px;
+  color: var(--color_timmew-font-color);
+  .advantages_contaner {
+    margin: 120px 64px;
+    li {
+      display: flex;
+      justify-content: space-around;
+      list-style: none;
+      margin-top: 120px;
+    }
+    img {
+      width: 610px;
+      height: 395px;
+      background-color: #eee;
+    }
+    .img-text {
+      flex-direction: row;
+      img {
+        box-shadow: -40px -40px var(--color_timmew-yellow_P0);
+      }
+    }
+    .text-img {
+      flex-direction: row-reverse;
+      img {
+        box-shadow: 40px 40px var(--color_timmew-yellow_P0);
+      }
+    }
+    .guide-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: start;
+      h2 {
+        font-size: 40px;
+        margin-bottom: 24px;
+      }
+      p {
+        font-weight: 600;
+      }
+    }
+  }
 }
 // 始め方
 .start {
@@ -35,7 +219,6 @@
 }
 // 質問
 .question {
-  height: 1440px;
 }
 // commew紹介
 .commew-introduction {
