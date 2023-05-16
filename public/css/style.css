@@ -134,7 +134,7 @@ header {
 }
 header .header {
   margin: auto;
-  width: 1280px;
+  max-width: 1280px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -210,6 +210,7 @@ header .header img {
   left: 30%;
   min-width: 993px;
   min-height: 576px;
+  background-color: var(--color_timmew-yellow_P4);
 }
 
 .section-title {
@@ -407,10 +408,40 @@ header .header img {
 .question {
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   margin: auto;
   font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5em;
   color: var(--color_timmew-font-color);
+}
+.question .question_contaner_QA {
+  margin: auto;
+  width: 800px;
+  margin-bottom: 40px;
+}
+.question .question_contaner_QA dt {
+  background-color: var(--color_timmew-yellow_P0);
+  height: 92px;
+  border-radius: 16px;
+}
+.question .question_contaner_QA dt img {
+  display: inline-block;
+  padding: 20px;
+}
+.question .question_contaner_QA dd {
+  display: none;
+}
+.question .question_contaner_QA dd img {
+  display: inline-block;
+}
+.question .appear dt {
+  border-radius: 16px 16px 0 0;
+}
+.question .appear dd {
+  display: block;
+  border: solid 2px var(--color_timmew-yellow_P0);
+  border-radius: 0 0 16px 16px;
 }
 
 .commew-introduction {

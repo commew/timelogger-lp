@@ -21,7 +21,7 @@ header {
   width: 100%;
   .header {
     margin: auto;
-    width: 1280px;
+    max-width: 1280px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -98,6 +98,7 @@ header {
       left: 30%;
       min-width: 993px;
       min-height: 576px;
+      background-color: var(--color_timmew-yellow_P4);
     }
   }
 }
@@ -302,10 +303,43 @@ header {
 .question {
   display: flex;
   justify-content: center;
-  text-align: center;
+  align-items: center;
   margin: auto;
   font-size: 24px;
+  font-weight: 600;
+  line-height: 1.5em;
   color: var(--color_timmew-font-color);
+  .question_contaner_QA {
+    margin: auto;
+    width: 800px;
+    margin-bottom: 40px;
+    dt {
+      background-color: var(--color_timmew-yellow_P0);
+      height: 92px;
+      border-radius: 16px;
+      img {
+        display: inline-block;
+        padding: 20px;
+      }
+    }
+    dd {
+      display: none;
+      img {
+        display: inline-block;
+      }
+    }
+    // dd::before {
+    //   content: "A";
+    // }
+  }
+  .appear dt {
+    border-radius: 16px 16px 0 0;
+  }
+  .appear dd {
+    display: block;
+    border: solid 2px var(--color_timmew-yellow_P0);
+    border-radius: 0 0 16px 16px;
+  }
 }
 
 // commew紹介
