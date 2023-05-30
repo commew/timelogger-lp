@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>timmew</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./public/css/style.css" />
   </head>
   <body>
@@ -19,6 +23,8 @@
     <main>
       <!-- メインビジュアル -->
       <section class="mainvisual">
+        <div class="parallel-quadrangle-a"></div>
+        <div class="parallel-quadrangle-b"></div>
         <div class="mainvisual_contaner">
           <div class="MV_text_contaner">
             <div class="MV_text">
@@ -31,7 +37,17 @@
                   (タイミュー)」登場！
                 </p>
               </div>
-              <a class="Login_btn" href="#">ログインして始める</a>
+              <div class="back">
+                <div class="button_base b03_skewed_slide_in">
+                  <div>
+                    <a class="Login_btn" href="#">ログインして始める</a>
+                  </div>
+                  <div></div>
+                  <div>
+                    <a class="Login_btn" href="#">ログインして始める</a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="MV_image">
@@ -46,7 +62,9 @@
       <!-- problem -->
       <section class="problem">
         <div class="problem_contaner">
-          <h2 class="section-title">毎日の時間管理で悩んでいませんか？</h2>
+          <h2 class="section-title animated-border" data-animate>
+            毎日の時間管理で悩んでいませんか？
+          </h2>
           <ul class="problem_before">
             <li>
               <img
@@ -120,14 +138,21 @@
       <!-- おすすめ -->
       <section class="recommended">
         <div class="recommended_contaner">
-          <h2 class="section-title">timmewはこんな人におすすめ</h2>
+          <h2 class="section-title animated-border" data-animate>
+            timmewはこんな人におすすめ<img
+              class="animated-img"
+              data-animate
+              src="./public/image/image-recommended/icon-denkyu2_color_edit 1.png"
+              alt="電球"
+            />
+          </h2>
           <ul>
             <li>
               <img
                 src="./public/image/image-recommended/Group 12.png"
                 alt="簡単時間管理"
               />
-              <p>簡単に時間管理できるウェブサービスを探している</p>
+              <p>簡単に時間管理できる<br />ウェブサービスを探している</p>
             </li>
             <li>
               <img
@@ -156,36 +181,74 @@
       <!-- メリット -->
       <section class="advantages">
         <div class="advantages_contaner">
-          <h2 class="section-title">timmewを使うメリット</h2>
-          <p class="section-title_text">
+          <h2 class="section-title animated-border" data-animate>
+            timmewを使うメリット
+          </h2>
+          <p class="section-title animated-border-bottom_text">
             timmewを使うと、こんなメリットがあります！
           </p>
 
           <div class="advantages_guide">
             <ul>
               <li class="img-text">
-                <img src="" alt="1クリック集計" />
+                <div class="advantages_image-area">
+                  <img
+                    class="advantages_namber"
+                    src="./public/image/image-advantages/01.png"
+                    alt="1"
+                  />
+                  <img class="advantages-imgae" src="" alt="1クリック集計" />
+                </div>
                 <div class="guide-text">
                   <h2>1クリックで集計開始！</h2>
                   <p>タスクの開始までの手順がとてもスマート。</p>
                 </div>
               </li>
               <li class="text-img">
-                <img src="" alt="集計簡単" />
+                <div class="advantages_image-area">
+                  <img
+                    class="advantages_namber-reverse"
+                    src="./public/image/image-advantages/02.png"
+                    alt="2"
+                  />
+                  <img class="advantages-imgae-reverse" src="" alt="集計簡単" />
+                </div>
                 <div class="guide-text">
-                  <h2>タスク毎の時間集計が簡単にできる</h2>
+                  <h2>タスク毎の時間集計が<br />簡単にできる</h2>
                   <p>タスクにかけている時間が簡単に把握できます。</p>
                 </div>
               </li>
               <li class="img-text">
-                <img src="" alt="時間の修正も出来る" />
+                <div class="advantages_image-area">
+                  <img
+                    class="advantages_namber"
+                    src="./public/image/image-advantages/03.png"
+                    alt="3"
+                  />
+                  <img
+                    class="advantages-imgae"
+                    src=""
+                    alt="時間の修正も出来る"
+                  />
+                </div>
                 <div class="guide-text">
                   <h2>時間の修正も簡単！</h2>
                   <p>集計後の時間修正も簡単に行えます。</p>
                 </div>
               </li>
               <li class="text-img">
-                <img src="" alt="ブラウザで簡単起動" />
+                <div class="advantages_image-area">
+                  <img
+                    class="advantages_namber-reverse"
+                    src="./public/image/image-advantages/04.png"
+                    alt="4"
+                  />
+                  <img
+                    class="advantages-imgae-reverse"
+                    src=""
+                    alt="ブラウザで簡単起動"
+                  />
+                </div>
                 <div class="guide-text">
                   <h2>ブラウザで簡単起動</h2>
                   <p>
@@ -200,7 +263,9 @@
       <!-- 始め方 -->
       <section class="start">
         <div class="start_contaner">
-          <h2 class="section-title">timmewの始め方</h2>
+          <h2 class="section-title animated-border" data-animate>
+            timmewの始め方
+          </h2>
           <p class="section-title_text">3ステップで簡単に開始できます！</p>
 
           <div class="step">
@@ -234,7 +299,9 @@
       <!-- 質問 -->
       <section class="question">
         <div class="question_contaner">
-          <h2 class="section-title">よくある質問</h2>
+          <h2 class="section-title animated-border" data-animate>
+            よくある質問
+          </h2>
           <div>
             <div class="question_contaner_QA">
               <dt>
@@ -289,7 +356,9 @@
       <!-- commew紹介 -->
       <section class="commew-introduction">
         <div class="commew-introduction_contaner">
-          <h2 class="section-title">timmewについて</h2>
+          <h2 class="section-title animated-border" data-animate>
+            timmewについて
+          </h2>
           <h3>
             timmewは、<br />Web系フリーランス向けオンラインサロン<br />
             「commew」内プロジェクトです。
@@ -298,14 +367,18 @@
             「手軽にPCで時間管理できるサービスが欲しい」<br />
             というメンバーの声をもとに、有志で作成しました。
           </p>
-          <p>ご意見・ご要望は<a href="#">commew</a>へお問い合わせください。</p>
+          <p class="commew-info">
+            ご意見・ご要望は<a href="#">commew</a>へお問い合わせください。
+          </p>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <a href="#"><img src="" alt="commewリンク" /></a>
+      <a href="https://commew.net/" target="_blank" rel="noopener"
+        ><img src="./public/image/commew-link.png" alt="commewリンク"
+      /></a>
       <small>2023&copy;commew</small>
     </footer>
-    <script src="js/main.js"></script>
+    <script src="./public/js/main.js"></script>
   </body>
 </html>
