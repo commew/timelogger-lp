@@ -173,6 +173,32 @@ body {
   border-bottom: 576px solid var(--color_timmew-yellow_P4); /* 高さ */
   border-left: 450px solid transparent; /* 左側の角度 */
 }
+@keyframes borderAnimation {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 923px;
+  }
+}
+.mainvisual .parallel-quadrangle-a {
+  animation: borderAnimation 2s forwards;
+}
+@keyframes borderAnimation-b {
+  0% {
+    width: 1433px;
+  }
+  100% {
+    width: 490px;
+  }
+}
+.mainvisual .parallel-quadrangle-b {
+  animation: borderAnimation-b 2s forwards;
+}
+.mainvisual .MV_image-main {
+  opacity: 0;
+  transition: opacity 1s;
+}
 .mainvisual .mainvisual_contaner {
   width: 1280px;
   display: flex;

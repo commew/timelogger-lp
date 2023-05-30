@@ -67,6 +67,38 @@ body {
     border-left: 450px solid transparent; /* 左側の角度 */
     // border-right: 300px solid transparent; /* 右側の角度 */
   }
+
+  @keyframes borderAnimation {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: 923px;
+    }
+  }
+
+  .parallel-quadrangle-a {
+    animation: borderAnimation 2s forwards;
+  }
+  @keyframes borderAnimation-b {
+    0% {
+      width: 1433px;
+    }
+
+    100% {
+      width: 490px;
+    }
+  }
+
+  .parallel-quadrangle-b {
+    animation: borderAnimation-b 2s forwards;
+  }
+
+  .MV_image-main {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+
   .mainvisual_contaner {
     width: 1280px;
     display: flex;
@@ -75,6 +107,7 @@ body {
     margin: auto;
     padding-left: 125px;
     color: var(--color_timmew-font-color);
+
     .MV_text {
       position: absolute;
       top: 25%;

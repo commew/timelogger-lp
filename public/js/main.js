@@ -32,3 +32,9 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+document
+  .querySelector(".parallel-quadrangle-a")
+  .addEventListener("animationend", () => {
+    document.querySelector(".MV_image-main").style.opacity = "1";
+  });
