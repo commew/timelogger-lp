@@ -136,6 +136,7 @@ header {
 header .header {
   margin: auto;
   max-width: 1280px;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,6 +147,11 @@ header .header img {
   height: 30px;
 }
 
+@media (max-width: 599px) {
+  header {
+    width: 100%;
+  }
+}
 body {
   font-family: "Noto Sans JP", sans-serif;
 }
@@ -156,48 +162,42 @@ body {
   font-size: 20px;
   position: relative;
 }
-.mainvisual .parallel-quadrangle-a {
+.mainvisual .mv-bg-img-1 {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 923px;
-  border-bottom: 576px solid #f9d862; /* 高さ */
-  border-right: 300px solid transparent; /* 右側の角度 */
-}
-.mainvisual .parallel-quadrangle-b {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: -1;
-  width: 490px;
-  border-bottom: 576px solid var(--color_timmew-yellow_P4); /* 高さ */
-  border-left: 450px solid transparent; /* 左側の角度 */
-}
-@keyframes borderAnimation {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 923px;
-  }
-}
-.mainvisual .parallel-quadrangle-a {
-  animation: borderAnimation 2s forwards;
-}
-@keyframes borderAnimation-b {
-  0% {
-    width: 1433px;
-  }
-  100% {
-    width: 490px;
-  }
-}
-.mainvisual .parallel-quadrangle-b {
-  animation: borderAnimation-b 2s forwards;
-}
-.mainvisual .MV_image-main {
+  left: -100%;
   opacity: 0;
-  transition: opacity 1s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation-name: slideIn-1;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes slideIn-1 {
+  100% {
+    left: -25%;
+    opacity: 1;
+  }
+}
+.mainvisual .mv-bg-img-2 {
+  position: absolute;
+  right: -100%;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation-name: slideIn-2;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes slideIn-2 {
+  100% {
+    right: -25%;
+    opacity: 1;
+    z-index: -1;
+  }
 }
 .mainvisual .mainvisual_contaner {
   width: 1280px;
@@ -311,12 +311,36 @@ body {
   -moz-transition: left 0.3s ease;
 }
 .mainvisual .mainvisual_contaner .MV_image-main {
+  display: none;
   position: absolute;
   left: 30%;
   min-width: 993px;
   min-height: 576px;
 }
 
+@media (max-width: 599px) {
+  body .mainvisual {
+    font-size: 16px;
+  }
+  body .mainvisual .mainvisual_contaner {
+    width: 100%;
+    padding: 0;
+  }
+  body .mainvisual .MV_image {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    overflow: hidden;
+    width: 100%;
+    height: 576px;
+  }
+  body .mainvisual .MV_image .MV_image-main {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
 .section-title {
   display: inline-block;
   color: var(--color_timmew-font-color);
