@@ -609,20 +609,32 @@ main {
     .advantages_image-area {
       position: relative;
       .advantages_namber {
-        width: 107.2px;
-        height: 82.27px;
         position: absolute;
         top: -40px;
         right: 0;
         background-color: transparent;
       }
       .advantages_namber-reverse {
-        width: 107.54px;
-        height: 82.27px;
         position: absolute;
         top: -40px;
         left: 0px;
         background-color: transparent;
+      }
+      .advantages_namber1 {
+        width: 82px;
+        height: 82px;
+      }
+      .advantages_namber2 {
+        width: 107px;
+        height: 82px;
+      }
+      .advantages_namber3 {
+        width: 107px;
+        height: 82px;
+      }
+      .advantages_namber4 {
+        width: 108px;
+        height: 82px;
       }
     }
     .text-img {
@@ -680,16 +692,12 @@ main {
       .advantages_image-area {
         position: relative;
         .advantages_namber {
-          width: 70px;
-          height: 70px;
           position: absolute;
           top: -40px;
           left: 0;
           background-color: transparent;
         }
         .advantages_namber-reverse {
-          width: 70px;
-          height: 70px;
           position: absolute;
           top: -40px;
           left: 0px;
@@ -730,13 +738,22 @@ main {
       }
       .advantages_image-area {
         position: relative;
-        .advantages_namber {
-          width: 50px;
-          height: 50px;
+
+        .advantages_namber1 {
+          width: 41px;
+          height: 41px;
         }
-        .advantages_namber-reverse {
-          width: 50px;
-          height: 50px;
+        .advantages_namber2 {
+          width: 53.5px;
+          height: 41px;
+        }
+        .advantages_namber3 {
+          width: 53.5px;
+          height: 41px;
+        }
+        .advantages_namber4 {
+          width: 54px;
+          height: 41px;
         }
       }
       .guide-text {
