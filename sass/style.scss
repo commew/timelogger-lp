@@ -180,8 +180,8 @@ main {
 
       .b03_skewed_slide_in div:nth-child(3) {
         color: var(--color_timmew-font-color);
-        left: -300px;
-        transition: left 0.2s ease;
+        // left: -300px;
+        // transition: left 0.2s ease;
       }
 
       .b03_skewed_slide_in:hover div:nth-child(2) {
@@ -194,6 +194,7 @@ main {
         transition: left 0.3s ease;
       }
     }
+
     .MV_image {
       display: flex;
       align-items: start;

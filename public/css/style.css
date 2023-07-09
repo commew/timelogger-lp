@@ -281,8 +281,6 @@ main {
 }
 .mainvisual .mainvisual_contaner .MV_text .b03_skewed_slide_in div:nth-child(3) {
   color: var(--color_timmew-font-color);
-  left: -300px;
-  transition: left 0.2s ease;
 }
 .mainvisual .mainvisual_contaner .MV_text .b03_skewed_slide_in:hover div:nth-child(2) {
   transition: all 0.5s ease;
