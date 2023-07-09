@@ -94,13 +94,15 @@ main {
   //   display: flex;
   // }
   .mainvisual_contaner {
-    width: 1280px;
+    // width: 1280px;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin: auto;
     padding-left: 125px;
     color: var(--color_timmew-font-color);
+    position: relative;
 
     .MV_text {
       position: absolute;
@@ -197,8 +199,9 @@ main {
 
     .MV_image {
       display: flex;
-      align-items: start;
-      justify-content: start;
+      align-items: center;
+      justify-content: center;
+      position: relative;
       // object-fit: cover;
       width: 880px !important;
       height: 500px !important;
