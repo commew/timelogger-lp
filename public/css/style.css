@@ -148,6 +148,7 @@ header .header img {
 
 body {
   font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0em;
 }
 
 main {
@@ -435,6 +436,7 @@ main {
   margin-bottom: 80px;
   font-size: 50px;
   font-weight: 400;
+  letter-spacing: 0.1em;
 }
 
 .animated-border {

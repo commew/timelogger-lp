@@ -38,6 +38,7 @@ header {
 
 body {
   font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0em;
 }
 
 // メインビジュアル
@@ -348,6 +349,7 @@ main {
   margin-bottom: 80px;
   font-size: 50px;
   font-weight: 400;
+  letter-spacing: 0.1em;
 }
 .animated-border {
   position: relative;
@@ -649,8 +651,8 @@ main {
 @media (max-width: 1000px) {
   .advantages {
     .advantages_contaner {
-      .section-title {
-      }
+      // .section-title {
+      // }
       .section-title_text {
         font-size: 26px;
       }
@@ -806,8 +808,8 @@ main {
     .start_contaner {
       margin: 60px auto;
       padding: 0;
-      .section-title {
-      }
+      // .section-title {
+      // }
       .section-title_text {
         font-size: 26px;
       }
@@ -844,8 +846,8 @@ main {
     .start_contaner {
       margin: 60px auto;
       padding: 0;
-      .section-title {
-      }
+      // .section-title {
+      // }
       .section-title_text {
         font-size: 20px;
         margin-bottom: 40px;
