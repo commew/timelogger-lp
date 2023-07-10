@@ -114,7 +114,7 @@ a {
 
 @font-face {
   font-family: "kawaiitegakimoji";
-  src: url(../public/fonts/KTEGAKI.ttf);
+  src: url(../fonts/KTEGAKI.ttf);
 }
 :root {
   --color_timmew-yellow_P0: #fadf7b;
