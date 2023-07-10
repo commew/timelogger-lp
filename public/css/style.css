@@ -568,13 +568,13 @@ main {
     border-right: 240px solid transparent;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 599px) {
   .problem {
     display: flex;
     font-size: 18px;
   }
   .problem .problem_contaner {
-    margin: 80px auto;
+    margin: 60px auto 30px;
   }
   .problem .problem_arrow {
     width: auto;
@@ -634,6 +634,21 @@ main {
 @media (max-width: 1000px) {
   .recommended .recommended_contaner {
     margin: 80px auto;
+  }
+  .recommended ul {
+    justify-content: center;
+  }
+  .recommended ul li img {
+    width: 150px;
+  }
+  .recommended ul li p {
+    width: 150px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 599px) {
+  .recommended .recommended_contaner {
+    margin: 60px auto 30px;
   }
   .recommended ul {
     justify-content: center;
@@ -797,8 +812,11 @@ main {
   }
 }
 @media (max-width: 599px) {
+  .advantages .advantages_contaner {
+    margin: 60px auto 30px;
+  }
   .advantages .advantages_contaner .section-title_text {
-    font-size: 20px;
+    font-size: 18px;
   }
   .advantages .advantages_contaner .advantages_guide {
     width: 400px;
@@ -924,11 +942,11 @@ main {
 }
 @media (max-width: 599px) {
   .start .start_contaner {
-    margin: 60px auto;
+    margin: 60px auto 30px;
     padding: 0;
   }
   .start .start_contaner .section-title_text {
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 40px;
   }
   .start .start_contaner .step {
@@ -1093,7 +1111,7 @@ main {
 }
 @media (max-width: 599px) {
   .question .question_contaner {
-    margin: 40px auto;
+    margin: 60px auto 30px;
   }
   .question .question_contaner_QA {
     margin: auto;
@@ -1172,10 +1190,9 @@ main {
   font-weight: 400;
   line-height: 1.5em;
   color: var(--color_timmew-font-color);
-  padding-bottom: 80px;
 }
-.commew-introduction h2 {
-  margin: 80px auto 24px;
+.commew-introduction .commew-introduction_contaner {
+  margin: 80px auto;
 }
 .commew-introduction h3 {
   font-size: 24px;
@@ -1194,6 +1211,14 @@ main {
   border-bottom: solid 1px var(--color_timmew-font-color);
 }
 
+@media (max-width: 599px) {
+  .commew-introduction .commew-introduction_contaner {
+    margin: 40px auto;
+  }
+  .commew-introduction h3 {
+    font-size: 18px;
+  }
+}
 .footer {
   background-color: var(--color_timmew-yellow_P0);
   display: flex;
