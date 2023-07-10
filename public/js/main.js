@@ -54,3 +54,35 @@ window.onload = function () {
     }
   }
 };
+
+const fadeElementOnScroll = () => {
+  const elements = document.querySelectorAll(
+    ".advantages .advantages_image-area"
+  );
+
+  const fadeInElement = (element) => {
+    element.style.opacity = 1;
+  };
+
+  const isElementInView = (element) => {
+    const rect = element.getBoundingClientRect();
+    return (
+      rect.top >= 0 &&
+      rect.bottom <=
+        (window.innerHeight || document.documentElement.clientHeight)
+    );
+  };
+
+  const handleScroll = () => {
+    elements.forEach((element) => {
+      if (isElementInView(element)) {
+        fadeInElement(element);
+      }
+    });
+  };
+
+  // スクロール時に要素をフェードインさせる
+  window.addEventListener("scroll", handleScroll);
+};
+
+fadeElementOnScroll();

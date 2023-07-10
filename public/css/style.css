@@ -684,6 +684,11 @@ main {
 }
 .advantages .advantages_contaner .advantages_image-area {
   position: relative;
+  opacity: 0;
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  transition: opacity 0.3s;
 }
 .advantages .advantages_contaner .advantages_image-area .advantages_namber {
   position: absolute;

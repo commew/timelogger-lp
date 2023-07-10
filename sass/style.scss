@@ -612,6 +612,19 @@ main {
     }
     .advantages_image-area {
       position: relative;
+      opacity: 0;
+      animation-name: fadeIn;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      transition: opacity 0.3s;
+      // @keyframes fadeIn {
+      //   from {
+      //     opacity: 0;
+      //   }
+      //   to {
+      //     opacity: 1;
+      //   }
+      // }
       .advantages_namber {
         position: absolute;
         top: -40px;
