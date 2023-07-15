@@ -48,7 +48,8 @@ main {
 .mainvisual {
   overflow: hidden !important;
   margin-top: 60px;
-  height: 576px;
+  height: calc(576 / 1280 * 100vw);
+
   font-size: 20px;
   position: relative;
 
@@ -90,42 +91,48 @@ main {
       z-index: -1;
     }
   }
-  // .mainvisual {
-  //   display: flex;
-  // }
-  .mainvisual_contaner {
-    // width: 1280px;
-    width: 100%;
+  .mainvisual {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    padding-left: 125px;
+    max-width: 1280px;
+  }
+  .mainvisual_contaner {
+    // width: 1280px;
+    height: calc(576 / 1280 * 100vw);
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin: 0;
+    padding-left: 15.625vw;
     color: var(--color_timmew-font-color);
     position: relative;
+    font-size: 1.5625vw;
 
     .MV_text {
       position: absolute;
       top: 25%;
       z-index: 1;
+      font-size: 1.5625vw;
       .consept-text {
         background-color: var(--color_timmew-font-color);
         color: #fff;
         font-weight: 600;
-        padding: 4px 40px;
-        margin-bottom: 16px;
+        padding: 0.3125vw 3.125vw;
+        margin-bottom: 1.25vw;
         width: fit-content;
       }
       .catchcopy {
         text-shadow: 2px 2px var(--color_timmew-yellow_P4);
-        font-size: 40px;
+        font-size: 3.125vw;
         font-weight: 600;
-        margin-bottom: 36px;
+        margin-bottom: 2.8125vw;
       }
       .MV_text_announce {
-        margin-bottom: 36px;
+        margin-bottom: 2.8125vw;
         img {
-          height: 20px;
+          height: 1.5625vw;
           display: inline-block;
         }
       }
@@ -133,17 +140,19 @@ main {
         display: flex;
         justify-content: start;
         align-items: start;
-        margin-top: 10px;
+        margin-top: 0.78125vw;
+        width: calc((280 / 1280) * 100vw);
+        height: 4.6875vh;
       }
       .button_base {
         position: relative;
-        width: 280px;
-        height: 60px;
-        border-radius: 30px;
+        width: 21.875vw;
+        height: calc(21.875vw * 0.214285714);
+        border-radius: calc(21.875vw * 0.5);
         text-align: center;
         box-sizing: border-box;
         cursor: default;
-        box-shadow: 3px 3px 0px #026b47;
+        box-shadow: 0.234375vw 0.234375vw 0vw #026b47;
       }
 
       .button_base:hover {
@@ -158,26 +167,26 @@ main {
         position: absolute;
         text-align: center;
         width: 100%;
-        height: 60px;
-        border-radius: 38px;
+        height: calc(21.875vw * 0.214285714);
+        border-radius: calc(21.875vw * 0.5);
         box-sizing: border-box;
         font-weight: 600;
-        padding: 12px;
+        padding: 0.9375vw;
       }
 
       .b03_skewed_slide_in div:nth-child(1) {
         background: #0efaa8;
         border: 1px solid #2cfbb3;
-        box-shadow: 3px 3px 0px #026b47;
+        box-shadow: 0.234375vw 0.234375vw 0vw #026b47;
       }
 
       .b03_skewed_slide_in div:nth-child(2) {
         background: #ffffff;
         border: 1px solid #0efaa8;
-        border-radius: 38px;
+        border-radius: calc(4.6875vh / 2);
         width: 100%;
         transition: all 0.2s ease;
-        transform: translate(-300px, 0px);
+        transform: translate(-23.4375vw, 0vw);
       }
 
       .b03_skewed_slide_in div:nth-child(3) {
@@ -202,147 +211,276 @@ main {
       align-items: center;
       justify-content: center;
       position: relative;
-      // object-fit: cover;
-      width: 880px !important;
-      height: 500px !important;
+      width: 100%;
+      height: calc(576 / 1280 * 100vw);
+      // padding-top: calc(500 / 880 * 100%); /* アスペクト比を維持 */
     }
     .MV_image-main {
-      width: 880px !important;
-      height: 500px !important;
+      width: calc(100vw); /* 幅はブラウザの幅から余白などを引いた値にする */
+      height: calc(
+        100vw * 500 / 1280
+      ); /* 高さは幅をアスペクト比に基づいて計算する */
       overflow: hidden !important;
       opacity: 0;
       transform: rotate(15deg);
       transition: opacity 0.5s ease-in-out; // アニメーション設定
       position: absolute;
-      top: 15%;
-      left: 30%;
-      max-width: 880px;
+      top: 13%;
+      left: 31.25vw;
+      max-width: calc(880 / 1280 * 100vw);
       object-fit: cover;
     }
   }
 }
-@media (max-width: 1000px) {
-  .mainvisual {
-    .mainvisual_contaner {
-      width: 100%;
-      justify-content: center;
-      padding-left: 0px;
+// @media (max-width: 1000px) {
+//   .mainvisual {
+//     // overflow: hidden !important;
+//     // margin-top: 60px;
+//     // height: calc(576 / 1280 * 100vw);
 
-      .MV_text {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        margin: auto;
-        left: 20%;
-        .consept-text {
-          padding: 4px auto;
-          font-weight: 400 !important;
-          margin-bottom: 16px;
-        }
-        .catchcopy {
-          text-shadow: 2px 2px var(--color_timmew-yellow_P4);
-          font-size: 30px;
-          font-weight: 600;
-          margin: 24px 0 36px 0;
-        }
-        .MV_text_announce-text {
-          font-size: 14px;
-          font-weight: 400;
-          background-color: var(--color_timmew-yellow_P0);
-          padding: 4px 10px;
-          width: fit-content;
-          margin-bottom: 10px;
-        }
-        .MV_text_announce {
-          margin-bottom: 36px;
-          img {
-            height: 20px;
-            display: inline-block;
-          }
-        }
-      }
-      .MV_image {
-        display: flex;
-        align-items: start;
-        justify-content: start;
-        object-fit: cover;
-        width: auto !important;
-      }
-      .MV_image-main {
-        width: 100%;
-        // overflow: hidden;
-        min-height: auto !important;
-        min-width: auto !important;
-        object-fit: cover;
-        object-position: left;
-      }
-    }
-  }
-}
-@media (max-width: 599px) {
-  .mainvisual {
-    font-size: 16px;
-    width: 100%;
-    .mainvisual_contaner {
-      .MV_text {
-        display: flex;
-        flex-direction: column;
-        width: 300px;
-        margin: auto;
+//     // font-size: 20px;
+//     // position: relative;
 
-        .consept-text {
-          padding: 4px auto;
-          font-weight: 400 !important;
-          margin-bottom: 16px;
-          font-size: 14px;
-        }
-        .catchcopy {
-          text-shadow: 2px 2px var(--color_timmew-yellow_P4);
-          font-size: 24px;
-          font-weight: 600;
-          margin: 24px 0 36px 0;
-        }
-        .MV_text_announce-text {
-          font-size: 14px;
-          font-weight: 400;
-          background-color: var(--color_timmew-yellow_P0);
-          padding: 4px 10px;
-          width: fit-content;
-          margin-bottom: 10px;
-        }
-        .MV_text_announce {
-          margin-bottom: 36px;
-          img {
-            height: 20px;
-            display: inline-block;
-          }
-        }
-        .button_base {
-          width: 250px !important;
-          height: 50px !important;
-        }
-        .b03_skewed_slide_in div {
-          height: 50px !important;
-        }
-      }
-      .MV_image {
-        display: flex;
-        align-items: start;
-        justify-content: start;
-        object-fit: cover;
-        width: auto !important;
-      }
-      .MV_image-main {
-        width: 100%;
-        // overflow: hidden;
-        min-height: auto !important;
-        min-width: auto !important;
-        object-fit: cover;
-        object-position: left;
-      }
-    }
-  }
-}
+//     // .mv-bg-img-1 {
+//     //   position: absolute;
+//     //   left: -100%;
+//     //   opacity: 0;
+//     //   width: 100%;
+//     //   height: 100%;
+//     //   object-fit: cover;
+//     //   animation-name: slideIn-1;
+//     //   animation-duration: 2s;
+//     //   animation-timing-function: ease-out;
+//     //   animation-fill-mode: forwards;
+//     // }
+//     // @keyframes slideIn-1 {
+//     //   100% {
+//     //     left: -25%;
+//     //     opacity: 1;
+//     //   }
+//     // }
+//     // .mv-bg-img-2 {
+//     //   position: absolute;
+
+//     //   right: -100%;
+//     //   opacity: 0;
+//     //   width: 100%;
+//     //   height: 100%;
+//     //   object-fit: cover;
+//     //   animation-name: slideIn-2;
+//     //   animation-duration: 2s;
+//     //   animation-timing-function: ease-out;
+//     //   animation-fill-mode: forwards;
+//     // }
+//     // @keyframes slideIn-2 {
+//     //   100% {
+//     //     right: -25%;
+//     //     opacity: 1;
+//     //     z-index: -1;
+//     //   }
+//     // }
+//     .mainvisual {
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       max-width: 1280px;
+//     }
+//     .mainvisual_contaner {
+//       // width: 1280px;
+//       // height: calc(576 / 1280 * 100vw);
+//       // width: 100%;
+//       // display: flex;
+//       // justify-content: start;
+//       // align-items: center;
+//       // margin: 0;
+//       // padding-left: 125px;
+//       // color: var(--color_timmew-font-color);
+//       // position: relative;
+
+//       .MV_text {
+//         position: absolute;
+//         top: 15%;
+//         z-index: 1;
+//         .consept-text {
+//           // background-color: var(--color_timmew-font-color);
+//           // color: #fff;
+//           font-weight: 400;
+//           padding: 4px 40px;
+//           margin-bottom: 16px;
+//           // width: fit-content;
+//         }
+//         .catchcopy {
+//           text-shadow: 2px 2px var(--color_timmew-yellow_P4);
+//           // font-size: 40px;
+//           font-weight: 600;
+//           margin-bottom: 36px;
+//         }
+//         .MV_text_announce {
+//           margin-bottom: 36px;
+//           img {
+//             height: 20px;
+//             display: inline-block;
+//           }
+//         }
+//         .login-btn_area {
+//           display: flex;
+//           justify-content: start;
+//           align-items: start;
+//           margin-top: 10px;
+//         }
+//         .button_base {
+//           position: relative;
+//           width: 280px;
+//           height: 60px;
+//           border-radius: 30px;
+//           text-align: center;
+//           box-sizing: border-box;
+//           cursor: default;
+//           box-shadow: 3px 3px 0px #026b47;
+//         }
+
+//         .button_base:hover {
+//           cursor: pointer;
+//         }
+
+//         .b03_skewed_slide_in {
+//           overflow: hidden;
+//         }
+
+//         .b03_skewed_slide_in div {
+//           position: absolute;
+//           text-align: center;
+//           width: 100%;
+//           height: 60px;
+//           border-radius: 38px;
+//           box-sizing: border-box;
+//           font-weight: 600;
+//           padding: 12px;
+//         }
+
+//         .b03_skewed_slide_in div:nth-child(1) {
+//           background: #0efaa8;
+//           border: 1px solid #2cfbb3;
+//           box-shadow: 3px 3px 0px #026b47;
+//         }
+
+//         .b03_skewed_slide_in div:nth-child(2) {
+//           background: #ffffff;
+//           border: 1px solid #0efaa8;
+//           border-radius: 38px;
+//           width: 100%;
+//           transition: all 0.2s ease;
+//           transform: translate(-300px, 0px);
+//         }
+
+//         .b03_skewed_slide_in div:nth-child(3) {
+//           color: var(--color_timmew-font-color);
+//           // left: -300px;
+//           // transition: left 0.2s ease;
+//         }
+
+//         .b03_skewed_slide_in:hover div:nth-child(2) {
+//           transition: all 0.5s ease;
+//           transform: translate(0px, 0px);
+//         }
+
+//         .b03_skewed_slide_in:hover div:nth-child(3) {
+//           left: 0px;
+//           transition: left 0.3s ease;
+//         }
+//       }
+
+//       // .MV_image {
+//       //   display: flex;
+//       //   align-items: center;
+//       //   justify-content: center;
+//       //   position: relative;
+//       //   width: 100%;
+//       //   height: calc(576 / 1280 * 100vw);
+//       //   // padding-top: calc(500 / 880 * 100%); /* アスペクト比を維持 */
+//       // }
+//       // .MV_image-main {
+//       //   width: calc(100vw); /* 幅はブラウザの幅から余白などを引いた値にする */
+//       //   height: calc(
+//       //     100vw * 500 / 1280
+//       //   ); /* 高さは幅をアスペクト比に基づいて計算する */
+//       //   overflow: hidden !important;
+//       //   opacity: 0;
+//       //   transform: rotate(15deg);
+//       //   transition: opacity 0.5s ease-in-out; // アニメーション設定
+//       //   position: absolute;
+//       //   top: 13%;
+//       //   left: 400px;
+//       //   max-width: calc(880 / 1280 * 100vw);
+//       //   object-fit: cover;
+//       // }
+//     }
+//   }
+// }
+// @media (max-width: 599px) {
+//   .mainvisual {
+//     font-size: 16px;
+//     width: 100%;
+//     .mainvisual_contaner {
+//       .MV_text {
+//         display: flex;
+//         flex-direction: column;
+//         width: 300px;
+//         margin: auto;
+
+//         .consept-text {
+//           padding: 4px auto;
+//           font-weight: 400 !important;
+//           margin-bottom: 16px;
+//           font-size: 14px;
+//         }
+//         .catchcopy {
+//           text-shadow: 2px 2px var(--color_timmew-yellow_P4);
+//           font-size: 24px;
+//           font-weight: 600;
+//           margin: 24px 0 36px 0;
+//         }
+//         .MV_text_announce-text {
+//           font-size: 14px;
+//           font-weight: 400;
+//           background-color: var(--color_timmew-yellow_P0);
+//           padding: 4px 10px;
+//           width: fit-content;
+//           margin-bottom: 10px;
+//         }
+//         .MV_text_announce {
+//           margin-bottom: 36px;
+//           img {
+//             height: 20px;
+//             display: inline-block;
+//           }
+//         }
+//         .button_base {
+//           width: 250px !important;
+//           height: 50px !important;
+//         }
+//         .b03_skewed_slide_in div {
+//           height: 50px !important;
+//         }
+//       }
+//       .MV_image {
+//         display: flex;
+//         align-items: start;
+//         justify-content: start;
+//         object-fit: cover;
+//         width: auto !important;
+//       }
+//       .MV_image-main {
+//         width: 100%;
+//         // overflow: hidden;
+//         min-height: auto !important;
+//         min-width: auto !important;
+//         object-fit: cover;
+//         object-position: left;
+//       }
+//     }
+//   }
+// }
 .section-title {
   display: inline-block;
   color: var(--color_timmew-font-color);
