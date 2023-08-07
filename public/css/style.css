@@ -587,7 +587,6 @@ main {
 .advantages .advantages_contaner img {
   width: 610px;
   height: 395px;
-  background-color: #eee;
 }
 .advantages .advantages_contaner .img-text {
   flex-direction: row;
@@ -669,7 +668,6 @@ main {
   .advantages .advantages_contaner img {
     width: 427px;
     height: 276px;
-    background-color: #eee;
   }
   .advantages .advantages_contaner .img-text {
     flex-direction: row;
@@ -1129,5 +1127,4 @@ main {
   width: 237px;
   height: 81px;
   margin-bottom: 16px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
